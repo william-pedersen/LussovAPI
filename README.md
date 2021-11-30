@@ -36,7 +36,7 @@ Create or use a previously existing file that represents your entry script. <br>
 A simple example can be found within the repository at [main.py](./main.py)
 
 > main.py
-```
+``` python
 from server import Server
 
 
@@ -54,7 +54,7 @@ if __name__ == '__main__':
 There are several configuration options available directly from the initialization of the Server object. <br>
 These are passed to the opject as loose type parameters. <br>
 
-```
+``` python
 name: str = 'Server', 
  # name of the server
 host: str = 'localhost', 
@@ -73,7 +73,7 @@ Each endpoint represents its own API directory, similar to how classes contain f
 For example, both the *default* **Ping** and **Test** endpoints represent the **test** API endpoint. <br><br>
 *How does this apply within our file structure?*
 
-```
+``` python
 .
 ├── ...
 ├── apis                    # Alternatively, directory defined in apidir
@@ -92,7 +92,7 @@ http://localhost:5000/test/{endpoint}?content={}
 <br>
 Within the file itself, it becomes clear that these endpoints function similar to React routing, requiring functional exporting.
 
-```
+``` python
 ...
 
 """ 
@@ -133,22 +133,22 @@ def route() -> Optional[set]:
 
 Within each endpoint, there are several HTTP methods available for utilizing, such as:
 > get
-```
+``` python
 def get(self) -> tuple:
   return {}, Endpoint.Codes.OK
 ```
 > post
-```
+``` python
 def post(self) -> tuple:
   return {}, Endpoint.Codes.OK
 ```
 > put
-```
+``` python
 def put(self) -> tuple:
   return {}, Endpoint.Codes.OK
 ```
 > delete
-```
+``` python
 def delete(self) -> tuple:
   return {}, Endpoint.Codes.OK
 ```
@@ -162,11 +162,11 @@ You may also notice that there are several applicable **decorators** available.<
 Decorators are not required to maintain the functionality of the application, but are required if you wish to pass arguments to HTTP methods.<br>
 
 > default arguments decorator
-```
+``` python
 @Endpoint.RequiresArgs()
 # Passes arguments from content to keyword args
 ```
-*Requires keyword content to be present within the query. All values passed to args should be passed through content as a string, per conventions.*
+*Requires keyword **content** to be present within the query. All values passed to args should be passed through content as a string, per conventions.*
 <br>
 
 
