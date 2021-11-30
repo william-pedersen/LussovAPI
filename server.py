@@ -100,13 +100,15 @@ class Server(object):
     def __init__(self, 
         name: str = 'Server', 
         host: str = 'localhost', 
+        port: Optional[Union[int, str]] = 5000,
         config: Optional[Union[str, dict]] = 'config.json', 
         apidir: Optional[str] = 'apis',
         **kwargs
     ) -> object:
 
-        self.name = name
-        self.host = host
+        self.name = str(name)
+        self.host = str(host)
+        self.port = int(port)
 
         self.app = Flask(
             self.name
@@ -154,7 +156,8 @@ class Server(object):
         ]
 
         self.app.run(
-            host = self.host
+            host = self.host,
+            port = self.port
         )
 
     def addRouting(self, endpoint: str, resources: list):
