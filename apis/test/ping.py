@@ -10,16 +10,6 @@ import requests
 class Ping(Endpoint):
     def __init__(self, **kwargs) -> Endpoint:
         super().__init__(**kwargs)
-        [
-            setattr(
-                self,
-                r,
-                v
-            )
-            for r, v
-            in kwargs.items()
-        ]
-        self.__name__ = 'test'
 
     @Endpoint.RequiresArgs()
     def get(self, args: dict) -> tuple:
@@ -30,16 +20,6 @@ class Ping(Endpoint):
 class Test(Endpoint):
     def __init__(self, **kwargs) -> Endpoint:
         super().__init__(**kwargs)
-        [
-            setattr(
-                self,
-                r,
-                v
-            )
-            for r, v
-            in kwargs.items()
-        ]
-        self.__name__ = 'test'
 
     def get(self) -> tuple:
 
