@@ -12,7 +12,7 @@
 
 Download file [requirements.txt](./requirements.txt) <br>
 
-> requirements.txt
+requirements.txt
 ```
 Flask>=2.0.2
 Flask_RESTful>=0.3.9
