@@ -23,7 +23,7 @@ requests>=2.26.0
 <br>
 Install pip dependancies by running the following command inside of cmd or a shell based application <br>
 
-> cmd / shell
+cmd / shell
 ```
 pip install -r requirements.txt
 ```
@@ -33,9 +33,9 @@ pip install -r requirements.txt
 ## Initialization and Setup
 
 Create or use a previously existing file that represents your entry script. <br>
-A simple example can be found within the repository at [main.py](./main.py)
+A simple example can be found within the repository at [main.py](./main.py) <br>
 
-> main.py
+main.py
 ``` python
 from server import Server
 
@@ -71,7 +71,7 @@ apidir: Optional[str] = 'apis',
 
 Each endpoint represents its own API directory, similar to how classes contain functions. <br>
 For example, both the *default* **Ping** and **Test** endpoints represent the **test** API endpoint. <br><br>
-*How does this apply within our file structure?*
+*How does this apply within our file structure?* <br>
 
 ``` python
 .
@@ -84,13 +84,13 @@ For example, both the *default* **Ping** and **Test** endpoints represent the **
 └── ...
 ```
 <br>
-Within this example, an API endpoint from ping.py would look as follows:
+Within this example, an API endpoint from ping.py would look as follows: <br>
 
 ```
 http://localhost:5000/test/{endpoint}?content={}
 ```
 <br>
-Within the file itself, it becomes clear that these endpoints function similar to React routing, requiring functional exporting.
+Within the file itself, it becomes clear that these endpoints function similar to React routing, requiring functional exporting.<br>
 
 ``` python
 ...
@@ -132,27 +132,27 @@ def route() -> Optional[set]:
 #### Methods <br>
 
 Within each endpoint, there are several HTTP methods available for utilizing, such as:
-> get
+<br>get
 ``` python
 def get(self) -> tuple:
   return {}, Endpoint.Codes.OK
 ```
-> post
+<br>post
 ``` python
 def post(self) -> tuple:
   return {}, Endpoint.Codes.OK
 ```
-> put
+<br>put
 ``` python
 def put(self) -> tuple:
   return {}, Endpoint.Codes.OK
 ```
-> delete
+<br>delete
 ``` python
 def delete(self) -> tuple:
   return {}, Endpoint.Codes.OK
 ```
-... and more <br>
+<br>... and more <br>
 
 A list of all modern HTTP methods and their descriptions can be found [here](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)<br>
 
@@ -161,7 +161,7 @@ A list of all modern HTTP methods and their descriptions can be found [here](htt
 You may also notice that there are several applicable **decorators** available.<br>
 Decorators are not required to maintain the functionality of the application, but are required if you wish to pass arguments to HTTP methods.<br>
 
-> default arguments decorator
+default arguments decorator
 ``` python
 @Endpoint.RequiresArgs()
 # Passes arguments from content to keyword args
