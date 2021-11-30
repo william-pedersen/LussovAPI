@@ -90,7 +90,8 @@ Within this example, an API endpoint from ping.py would look as follows: <br>
 http://localhost:5000/test/{endpoint}?content={}
 ```
 <br>
-Within the file itself, it becomes clear that these endpoints function similar to React routing, requiring functional exporting.<br>
+Within the file itself, it becomes clear that these endpoints function similar to React routing, requiring functional exporting.
+<br>
 
 ``` python
 ...
