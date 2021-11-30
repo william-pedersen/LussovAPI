@@ -8,7 +8,7 @@
 
 **Long version**:
 
-#### Install Dependancies
+## Install Dependancies
 
 Download file [requirements.txt](./requirements.txt) <br>
 
@@ -30,7 +30,7 @@ pip install -r requirements.txt
 <br>
 🎉 Congratulations!
 
-#### Initialization and Setup
+## Initialization and Setup
 
 Create or use a previously existing file that represents your entry script. <br>
 A simple example can be found within the repository at [main.py](./main.py)
@@ -129,7 +129,7 @@ def route() -> Optional[set]:
 ```
 <br>
 
-##### Methods <br>
+#### Methods <br>
 
 Within each endpoint, there are several HTTP methods available for utilizing, such as:
 > get
@@ -156,7 +156,7 @@ def delete(self) -> tuple:
 
 A list of all modern HTTP methods and their descriptions can be found [here](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)<br>
 
-##### Decorators <br>
+#### Decorators <br>
 
 You may also notice that there are several applicable **decorators** available.<br>
 Decorators are not required to maintain the functionality of the application, but are required if you wish to pass arguments to HTTP methods.<br>
